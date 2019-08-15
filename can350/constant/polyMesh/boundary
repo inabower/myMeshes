@@ -1,0 +1,74 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  v1806                                 |
+|   \\  /    A nd           | Web:      www.OpenFOAM.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       polyBoundaryMesh;
+    location    "constant/polyMesh";
+    object      boundary;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+6
+(
+    wall_top
+    {
+        type            wall;
+        inGroups        1(wall);
+        nFaces          144;
+        startFace       13334;
+    }
+    wall_bottom
+    {
+        type            wall;
+        inGroups        1(wall);
+        nFaces          24;
+        startFace       13478;
+    }
+    wall_in
+    {
+        type            wall;
+        inGroups        1(wall);
+        nFaces          108;
+        startFace       13502;
+    }
+    wall_out
+    {
+        type            wall;
+        inGroups        1(wall);
+        nFaces          444;
+        startFace       13610;
+    }
+    cyclic_minY
+    {
+        type            cyclicAMI;
+        inGroups        1(cyclicAMI);
+        nFaces          490;
+        startFace       14054;
+        matchTolerance  0.0001;
+        transform       rotational;
+        neighbourPatch  cyclic_minX;
+        rotationAxis    (0 0 1);
+        rotationCentre  (0 0 0);
+    }
+    cyclic_minX
+    {
+        type            cyclicAMI;
+        inGroups        1(cyclicAMI);
+        nFaces          490;
+        startFace       14544;
+        matchTolerance  0.0001;
+        transform       rotational;
+        neighbourPatch  cyclic_minY;
+        rotationAxis    (0 0 1);
+        rotationCentre  (0 0 0);
+    }
+)
+
+// ************************************************************************* //

@@ -1,0 +1,49 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  v1812                                 |
+|   \\  /    A nd           | Web:      www.OpenFOAM.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    object      changeDictionaryDict;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+boundary
+{
+    inlet
+    {
+        type            patch;
+    }
+    outlet
+    {
+        type            patch;
+    }
+    sideWall
+    {
+        type            wall;
+    }
+    cyclicAMI_A
+    {
+        type            cyclicAMI;
+        neighbourPatch  cyclicAMI_B;
+        tolerance       1e-6;
+    }
+    wall_ball
+    {
+        type            wall;
+    }
+    cyclicAMI_B
+    {
+        type            cyclicAMI;
+        neighbourPatch  cyclicAMI_A;
+        tolerance       1e-6;
+    }
+}
+
+// ************************************************************************* //
