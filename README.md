@@ -3,6 +3,8 @@
 
 ## beer350
 350mLビールのアルミ缶です。
+![アルミ缶](https://github.com/inabower/myMeshes/blob/master/can350/beer350_1.png)
+
 
 ```checkMesh
 Mesh stats
@@ -31,7 +33,8 @@ Checking geometry...
 ```
 
 ## skate
-二人のスケート選手の周りの流れです（2D）
+上から見た二人のスケート選手の周りの流れです（2D）
+![スケート選手](https://github.com/inabower/myMeshes/blob/master/skate/skate_1.png)
 
 ```checkMesh
 Mesh stats
@@ -61,7 +64,8 @@ Checking geometry...
 
 ## messFlask
 メスフラスコ内部の流れです。
-![画像](https://ja.wikipedia.org/wiki/%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB:Messkolben.jpg)
+
+![mess](https://github.com/inabower/myMeshes/blob/master/messFlask/messFlask_2.png)
 
 ```checkMesh
 Mesh stats
@@ -90,7 +94,8 @@ Checking geometry...
 ```
 
 ## wineAndGlass
-ワインとワイングラスです
+ワインとワイングラスです。
+![wineandglass](https://github.com/inabower/myMeshes/blob/master/wineAndGlass/wineglass.png)
 
 - wine
 
@@ -152,6 +157,7 @@ Checking geometry...
 
 ## golfBall
 ゴルフボール周りの空気です。
+![golf](https://github.com/inabower/myMeshes/blob/master/golf/golf_1.png)
 
 ```checkMesh
 Mesh stats
