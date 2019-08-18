@@ -186,3 +186,33 @@ Checking geometry...
     Coupled point location match (average 0) OK.
 
 ```
+
+## paddleMixerVessel
+パドル翼の撹拌槽です。
+![golf](https://github.com/inabower/myMeshes/blob/master/paddleMixerVessel/paddleMixerVessel.png)
+
+```checkMesh
+Mesh stats
+    points:           861240
+    faces:            2534912
+    internal faces:   2486080
+    cells:            836832
+
+Overall number of cells of each type:
+    hexahedra:     836832
+
+Checking geometry...
+    Overall domain bounding box (-0.05 -0.05 0) (0.05 0.05 0.2)
+    Mesh has 3 geometric (non-empty/wedge) directions (1 1 1)
+    Mesh has 3 solution (non-empty) directions (1 1 1)
+    Boundary openness (1.21282e-16 -2.01521e-17 -5.81743e-16) OK.
+    Max cell openness = 3.52966e-16 OK.
+    Max aspect ratio = 14.1943 OK.
+    Minimum face area = 5.67265e-08. Maximum face area = 5.39398e-06.  Face area magnitudes OK.
+    Min volume = 4.84731e-11. Max volume = 4.90262e-09.  Total volume = 0.00156065.  Cell volumes OK.
+    Mesh non-orthogonality Max: 65.558 average: 8.86436
+    Non-orthogonality check OK.
+    Face pyramids OK.
+    Max skewness = 0.935368 OK.
+    Coupled point location match (average 0) OK.
+```

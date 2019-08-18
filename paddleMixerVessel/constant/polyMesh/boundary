@@ -1,0 +1,149 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  v1906                                 |
+|   \\  /    A nd           | Web:      www.OpenFOAM.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      binary;
+    class       polyBoundaryMesh;
+    arch        "LSB;label=32;scalar=64";
+    location    "constant/polyMesh";
+    object      boundary;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+18
+(
+    outlet
+    {
+        type            patch;
+        nFaces          6960;
+        startFace       2486080;
+    }
+    walls
+    {
+        type            patch;
+        nFaces          21600;
+        startFace       2493040;
+    }
+    shaft
+    {
+        type            patch;
+        nFaces          14256;
+        startFace       2514640;
+    }
+    domain1_to_rotor
+    {
+        type            mappedWall;
+        inGroups        2(wall mappedPatch);
+        nFaces          0;
+        startFace       2528896;
+        sampleMode      nearestPatchFace;
+        sampleRegion    rotor;
+        samplePatch     rotor_to_domain1;
+    }
+    rotor_to_domain1
+    {
+        type            wall;
+        inGroups        2(wall mappedPatch);
+        nFaces          0;
+        startFace       2528896;
+    }
+    wing_px_o_m
+    {
+        type            wall;
+        inGroups        2(wall wall_wing_px_o);
+        nFaces          672;
+        startFace       2528896;
+    }
+    wing_px_o_s
+    {
+        type            wall;
+        inGroups        2(wall wall_wing_px_o);
+        nFaces          480;
+        startFace       2529568;
+    }
+    wing_nx_o_m
+    {
+        type            wall;
+        inGroups        2(wall wall_wing_nx_o);
+        nFaces          1056;
+        startFace       2530048;
+    }
+    wing_nx_o_s
+    {
+        type            wall;
+        inGroups        2(wall wall_wing_nx_o);
+        nFaces          96;
+        startFace       2531104;
+    }
+    wing_py_o_m
+    {
+        type            wall;
+        inGroups        2(wall wall_wing_py_o);
+        nFaces          1056;
+        startFace       2531200;
+    }
+    wing_py_o_s
+    {
+        type            wall;
+        inGroups        2(wall wall_wing_py_o);
+        nFaces          96;
+        startFace       2532256;
+    }
+    wing_ny_o_m
+    {
+        type            wall;
+        inGroups        2(wall wall_wing_ny_o);
+        nFaces          1056;
+        startFace       2532352;
+    }
+    wing_ny_o_s
+    {
+        type            wall;
+        inGroups        2(wall wall_wing_ny_o);
+        nFaces          96;
+        startFace       2533408;
+    }
+    wing_px_i_m
+    {
+        type            wall;
+        inGroups        2(wall wall_wing_px_i);
+        nFaces          224;
+        startFace       2533504;
+    }
+    wing_px_i_s
+    {
+        type            wall;
+        inGroups        2(wall wall_wing_px_i);
+        nFaces          128;
+        startFace       2533728;
+    }
+    wing_nx_i_m
+    {
+        type            wall;
+        inGroups        2(wall wall_wing_nx_i);
+        nFaces          352;
+        startFace       2533856;
+    }
+    wing_py_i_m
+    {
+        type            wall;
+        inGroups        2(wall wall_wing_py_i);
+        nFaces          352;
+        startFace       2534208;
+    }
+    wing_ny_i_m
+    {
+        type            wall;
+        inGroups        2(wall wall_wing_ny_i);
+        nFaces          352;
+        startFace       2534560;
+    }
+)
+
+// ************************************************************************* //
